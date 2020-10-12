@@ -159,6 +159,13 @@ func GetScreenHeight() int {
 	return v
 }
 
+// GetWindowPosition - Get position of the screen (returns 0,0 on non-PLATFORM_DESKTOP platforms)
+func GetWindowPosition() Vector2 {
+	ret := C.GetWindowPosition()
+	v := newVector2FromPointer(unsafe.Pointer(&ret))
+	return v
+}
+
 // GetMonitorCount - Get number of connected monitors
 func GetMonitorCount() int {
 	ret := C.GetMonitorCount()
