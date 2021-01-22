@@ -219,7 +219,8 @@ Image LoadImage(const char *fileName)
         || (IsFileExtension(fileName, ".tga"))
 #endif
 #if defined(SUPPORT_FILEFORMAT_JPG)
-        || (IsFileExtension(fileName, ".jpg"))
+        || (IsFileExtension(fileName, ".jpg") || 
+        IsFileExtension(fileName, ".jpeg"))
 #endif
 #if defined(SUPPORT_FILEFORMAT_GIF)
         || (IsFileExtension(fileName, ".gif"))
